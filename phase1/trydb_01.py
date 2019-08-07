@@ -24,9 +24,9 @@ myconn = mysql.connector.connect(
     auth_plugin='mysql_native_password',
 )
 print(myconn)
+mycursor = myconn.cursor()
 
 # Step 2  创建一张表
-mycursor = myconn.cursor()
 sql = 'CREATE TABLE IF NOT EXISTS stdt001( \
     id INT UNSIGNED AUTO_INCREMENT, \
     name VARCHAR(10), \
