@@ -39,8 +39,8 @@ mycursor.execute(sql)
 
 # Trial 3 插入一条数据  (增 Insert)
 print('\n----- 插入一条数据... -----')
-sql = "INSERT INTO students (name, class) VALUES (%s, %s)"
-val = ("张三", 2)
+sql = 'INSERT INTO rmgc20db.students (name,sex,birthday) VALUES (%s,%s,%s)'
+val = ('Lisa',0,'2004/4/15')'
 mycursor.execute(sql, val)
 myconn.commit()
 
