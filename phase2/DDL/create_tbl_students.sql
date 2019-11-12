@@ -3,6 +3,7 @@
 /* Created on:     2019-11-12 22:05:45                          */
 /*==============================================================*/
 
+SET character_set_server= utf8mb4;
 
 drop table if exists classes_info;
 

@@ -28,5 +28,12 @@ VALUES
 ('GZYY0308','高3英语文科班（下）','仅文科班读');
 
 
+INSERT INTO rmgc20_student.course_info
+(cid,c_name,introduce)
+VALUES
+('GZYW0101','高1语文（上）','我都知道，不用多说，天天学着。。。');
+
+
+
 /* 删除所有数据 （清空数据表） */
 delete from rmgc20_student.course_info

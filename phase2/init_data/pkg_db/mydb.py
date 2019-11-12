@@ -23,9 +23,9 @@ class MyDB():
 
     def get_conn(self):
         self.__myconn = mysql.connector.connect(
-            host="192.168.0.36",
+            host="192.168.10.21",
             database='rmgc20_student',
-            user='phase6',
+            user='pd_test_dba',
             password='Rmgc+20-20',
             auth_plugin='mysql_native_password'
         )
