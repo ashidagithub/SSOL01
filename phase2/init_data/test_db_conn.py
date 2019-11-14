@@ -11,8 +11,6 @@
 from pkg_db.mydb import MyDB
 
 db = MyDB()
-
-db_name = 'rmgc20_student'
 tbl_name = 'course_info'
 
 '''

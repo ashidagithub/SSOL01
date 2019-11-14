@@ -169,33 +169,32 @@ def pick_given_name_by_sex(is_boy):
 def pick_a_full_name():
 
     sf = pick_family_name()
-    if len(sf) <= 1:
-        sf = sf + '   '
-    else:
-        sf = sf + ' '
-
     sg = pick_given_name()
-    if len(sg) <= 1:
-        sg = sg + '   '
-    else:
-        sg = sg + ' '
 
     full_name = sf + sg
     return full_name
+
 
 def pick_a_full_name_by_sex(is_boy):
 
     sf = pick_family_name()
-    if len(sf) <= 1:
-        sf = sf + '   '
-    else:
-        sf = sf + ' '
-
     sg = pick_given_name_by_sex(is_boy)
-    if len(sg) <= 1:
-        sg = sg + '   '
-    else:
-        sg = sg + ' '
 
     full_name = sf + sg
     return full_name
+
+
+# ---------------------------
+if __name__ == '__main__':
+
+    print('---- 随机男孩女孩 ---')
+    for idx in range(5):
+        print(pick_a_full_name())
+
+    print('---- 指定男孩 ---')
+    for idx in range(5):
+        print(pick_a_full_name_by_sex(1))
+
+    print('---- 指定女孩 ---')
+    for idx in range(5):
+        print(pick_a_full_name_by_sex(2))
