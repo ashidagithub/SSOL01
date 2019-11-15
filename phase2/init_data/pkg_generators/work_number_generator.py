@@ -17,8 +17,8 @@ import random
 
 def generate_worker_number():
 
-    # 入职年度 介于 1985-2019年之间
-    yyyy = random.randint(1985, 2019)
+    # 入职年度 介于 2000-2019年之间
+    yyyy = random.randint(2000, 2019)
     # 流水号 介于 0-999 之间
     serial_number = random.randint(0, 99999)
 

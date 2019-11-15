@@ -22,7 +22,7 @@ import datetime
 
 def generate_birthday(is_teacher):
 
-    if is_teacher:
+    if is_teacher == True:
         yyyy = random.randint(1959, 1995)
     else:
         yyyy = random.randint(2000, 2003)
@@ -45,6 +45,6 @@ def generate_birthday(is_teacher):
 # ---------------------------
 if __name__ == '__main__':
 
-    for idx in range(5):
+    for idx in range(50):
         print(generate_birthday(True))
         print(generate_birthday(False))
