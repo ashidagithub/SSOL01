@@ -1,4 +1,4 @@
-INSERT INTO rmgc20_student.classes_info
+INSERT INTO fffff.classes_info
 (class_code, tid, class_name, class_grade, class_no)
 VALUES
 ('GZ0101','','高中1年级 (1)班',1,1),

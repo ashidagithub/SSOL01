@@ -27,7 +27,6 @@ create table classes_info
    class_name           char(20) not null,
    class_grade          int not null,
    class_no             int not null,
-   t_id                 char(10) not null,
    primary key (class_code)
 );
 
