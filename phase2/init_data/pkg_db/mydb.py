@@ -23,9 +23,9 @@ class MyDB():
 
     def get_conn(self):
         self.__myconn = mysql.connector.connect(
-            host="192.168.10.21",
-            database='rmgc20_student',
-            user='pd_test_dba',
+            host="localhost",
+            database='fffff',
+            user='student001',
             password='Rmgc+20-20',
             auth_plugin='mysql_native_password'
         )
@@ -39,10 +39,29 @@ class MyDB():
         self.__myconn.commit()
         return
 
-    @property
+    @property  # 将 __myconn 对外部公开为只读属性
     def conn(self):
         return self.__myconn
 
-    @property
+    @property  # 将 __mycursor 对外部公开为只读属性
     def cursor(self):
         return self.__mycursor
+
+
+if __name__ == '__main__':
+    test_db = MyDB()
+
+    tbl_name = 'course_info'
+    sql = 'SELECT cid,c_name,introduce \
+            FROM %s' % tbl_name
+
+    test_db.cursor.execute(sql)
+    myresult = test_db.cursor.fetchall() # fetchall() 获取所有记录
+    print(myresult)
+
+    print('-------------------')
+    for row in myresult:
+        print(row[0])
+
+
+#myresult = [(cid, c_name, introduce),(cid, c_name, introduce),(cid, c_name, introduce)]
