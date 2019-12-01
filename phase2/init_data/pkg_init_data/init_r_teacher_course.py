@@ -25,7 +25,7 @@ tbl_t_c = 'teacher_course'
 '''
 Step1：将所有课程信息读取到列表中去
 '''
-sql = 'SELECT cid FROM %s.%s' % (db_name, tbl_course)
+sql = 'SELECT cid FROM %s' % tbl_course
 db.cursor.execute(sql)
 myresult = db.cursor.fetchall()     # fetchall() 获取所有记录
 
@@ -40,14 +40,14 @@ print(course_list)
 '''
 Step2: 清除所有已有的 “教师-课程”关系表
 '''
-sql = 'DELETE FROM %s.%s' % (db_name, tbl_t_c)
+sql = 'DELETE FROM %s' % tbl_t_c
 db.cursor.execute(sql)
 db.commit()
 
 '''
 Step3：顺序读取所有教师的信息，随机选取一个课程后插入到 “教师-课程”关系表
 '''
-sql = 'SELECT tid FROM %s.%s' % (db_name, tbl_teacher)
+sql = 'SELECT tid FROM %s' % tbl_teacher
 db.cursor.execute(sql)
 myresult = db.cursor.fetchall()     # fetchall() 获取所有记录
 
@@ -55,7 +55,7 @@ for row in myresult:
     tid = row[0]
     cid = random.choice(course_list)
 
-    sql = 'INSERT INTO %s.%s ' % (db_name, tbl_t_c)
+    sql = 'INSERT INTO %s ' % tbl_t_c
     sql += '(tid,cid) '
     sql += 'VALUES ('
     sql += '"%s","%s"' % (tid, cid)

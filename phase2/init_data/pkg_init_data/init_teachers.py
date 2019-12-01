@@ -70,7 +70,7 @@ for idx in range(100):
     birthday = gbd(is_teacher)
     in_charge = False
 
-    sql = 'INSERT INTO %s.%s ' % tbl_name
+    sql = 'INSERT INTO %s ' % tbl_name
     sql += '(tid,class_code,t_name,t_sex,t_birthday,in_charge) '
     sql += 'VALUES ('
     sql += '"%s","%s","%s",%d,"%s",%s' % (
